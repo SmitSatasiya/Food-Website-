@@ -22,7 +22,8 @@ const Verify = () => {
       if (response.data.success) {
         navigate("/myorders");
       } else {
-        navigate("/");
+        // navigate("/");
+        navigate("https://food-del-frontend-i13g.onrender.com/");
       }
     } catch (error) {
       console.error("Error verifying payment:", error);
