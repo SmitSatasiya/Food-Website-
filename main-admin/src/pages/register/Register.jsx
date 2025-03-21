@@ -10,7 +10,8 @@ const Register = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const url = "http://localhost:4000"; // backend URL
+  // const url = "http://localhost:4000"; // backend URL
+  const url = "https://food-del-backend-3vxn.onrender.com"; // backend URL
 
   const handleSubmit = async (e) => {
     e.preventDefault();
