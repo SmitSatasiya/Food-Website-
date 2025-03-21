@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const AdminApproval = () => {
   const [pendingAdmins, setPendingAdmins] = useState([]);
-  const url = "http://localhost:4000"; //backend URL
+  const url = 'http://localhost:4000'; // backend URL
 
   useEffect(() => {
     const fetchPendingAdmins = async () => {
@@ -17,7 +17,7 @@ const AdminApproval = () => {
           toast.error(response.data.message);
         }
       } catch (error) {
-        toast.error("Error fetching pending registrations: " + error.message);
+        toast.error(`Error fetching pending registrations: ${error.message}`);
       }
     };
 
@@ -28,13 +28,13 @@ const AdminApproval = () => {
     try {
       const response = await axios.post(`${url}/api/admin/approve/${id}`);
       if (response.data.success) {
-        toast.success("Admin approved successfully!");
+        toast.success('Admin approved successfully!');
         setPendingAdmins(pendingAdmins.filter((admin) => admin._id !== id));
       } else {
         toast.error(response.data.message);
       }
     } catch (error) {
-      toast.error("Error approving admin: " + error.message);
+      toast.error(`Error approving admin: ${error.message}`);
     }
   };
 
