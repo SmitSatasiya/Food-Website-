@@ -19,27 +19,16 @@ const Verify = () => {
       });
 
       // Check if the response indicates success
-    //   if (response.data.success) {
-    //     navigate("https://food-del-frontend-i13g.onrender.com/myorders");
-    //   } else {
-    //     navigate("/");
-    //     // navigate("https://food-del-frontend-i13g.onrender.com/");
-    //   }
-    // } catch (error) {
-    //   console.error("Error verifying payment:", error);
-    //   navigate("/");
-    // }
-       // Navigate based on success response
       if (response.data.success) {
-        navigate("/myorders"); // Change this to the correct route
+        navigate("/myorders");
       } else {
         navigate("/");
+        // navigate("https://food-del-frontend-i13g.onrender.com/");
       }
     } catch (error) {
       console.error("Error verifying payment:", error);
       navigate("/");
     }
-  }, [url, success, orderId, navigate]);
   };
 
   useEffect(() => {
