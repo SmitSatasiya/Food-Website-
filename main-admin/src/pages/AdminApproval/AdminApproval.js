@@ -5,7 +5,8 @@ import "react-toastify/dist/ReactToastify.css";
 
 const AdminApproval = () => {
   const [pendingAdmins, setPendingAdmins] = useState([]);
-  const url = "http://localhost:4000"; //backend URL
+  // const url = "http://localhost:4000"; //backend URL
+  const url = "https://food-del-backend-3vxn.onrender.com"; //backend URL
 
   useEffect(() => {
     const fetchPendingAdmins = async () => {
