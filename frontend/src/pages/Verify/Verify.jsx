@@ -20,10 +20,10 @@ const Verify = () => {
 
       // Check if the response indicates success
       if (response.data.success) {
-        navigate("/myorders");
+        navigate("https://food-del-frontend-i13g.onrender.com/myorders");
       } else {
-        // navigate("/");
-        navigate("https://food-del-frontend-i13g.onrender.com/");
+        navigate("/");
+        // navigate("https://food-del-frontend-i13g.onrender.com/");
       }
     } catch (error) {
       console.error("Error verifying payment:", error);
