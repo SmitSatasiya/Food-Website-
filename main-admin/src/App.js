@@ -29,6 +29,7 @@ import AdminApproval from "./pages/AdminApproval/AdminApproval.js";
 
 const App = () => {
   const url = "http://localhost:4000";
+  const url = "https://food-del-backend-3vxn.onrender.com";
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const {
