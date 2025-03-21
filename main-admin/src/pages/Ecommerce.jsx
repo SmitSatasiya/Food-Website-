@@ -279,7 +279,7 @@ const Ecommerce = () => {
             <p className="text-md font-semibold mb-2">Leaders</p>
             <div className="flex gap-4">
               {medicalproBranding.leaders.map((item, index) => (
-                <img key={index} className="rounded-full w-8 h-8" src={item.image} alt="" />
+                <img key={index} className="rounded-full w-8 h-8" src={item.image} alt='' />
               ))}
             </div>
           </div>
@@ -308,7 +308,7 @@ const Ecommerce = () => {
             <img
               className="md:w-96 h-50 "
               src={assets.new_come}
-              alt=""
+              alt=''
             />
             <div className="mt-8">
               <p className="font-semibold text-lg">Veggie Paradise coming soon!</p>

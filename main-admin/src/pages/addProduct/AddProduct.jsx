@@ -7,9 +7,9 @@ import { toast } from "react-toastify";
 const AddProduct = ({ url }) => {
   const [image, setImage] = useState(null);
   const [data, setData] = useState({
-    name: "",
-    description: "",
-    price: "",
+    name: '',
+    description: '',
+    price: '',
     category: "Salad",
   });
 
@@ -36,9 +36,9 @@ const AddProduct = ({ url }) => {
       const response = await axios.post(`${url}/api/food/add`, formData);
       if (response.data.success) {
         setData({
-          name: "",
-          description: "",
-          price: "",
+          name: '',
+          description: '',
+          price: '',
           category: "Salad",
         });
         setImage(null);

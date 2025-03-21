@@ -64,7 +64,7 @@ const Orders = ({ url }) => {
                       item.name +
                       " x " +
                       item.quantity +
-                      (itemIndex === order.items.length - 1 ? "" : ", ")
+                      (itemIndex === order.items.length - 1 ? '' : ", ")
                   )}
                 </p>
                 <p className="order-item-name">

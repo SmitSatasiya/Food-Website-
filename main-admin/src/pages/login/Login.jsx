@@ -5,8 +5,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Login = ({ setIsAuthenticated }) => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
@@ -59,23 +59,25 @@ const Login = ({ setIsAuthenticated }) => {
             <div className="col-lg-12 login-form">
               <form onSubmit={handleLogin} className="loginform">
                 <div className="form-group">
-                  <label className="form-control-label">EMAIL</label>
+                  <label htmlFor='email' className="form-control-label">EMAIL</label>
                   <input
                     type="email"
                     className="form-control login-email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
+                    id="email"
                   />
                 </div>
                 <div className="form-group">
-                  <label className="form-control-label">PASSWORD</label>
+                  <label htmlFor="password" className="form-control-label">PASSWORD</label>
                   <input
                     type="password"
                     className="form-control login-pass"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     required
+                    id="password"
                   />
                 </div>
                 <div className="col-lg-12 loginbttm">

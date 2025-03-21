@@ -7,9 +7,9 @@ import { useNavigate } from "react-router-dom";
 
 const Register = () => {
   const navigate = useNavigate();
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   // const url = "http://localhost:4000"; // backend URL
   const url = "https://food-del-backend-3vxn.onrender.com"; // backend URL
 
@@ -26,9 +26,9 @@ const Register = () => {
         toast.success(
           "Registration successful! Awaiting approval from the main admin."
         );
-        setUsername("");
-        setEmail("");
-        setPassword("");
+        setUsername('');
+        setEmail('');
+        setPassword('');
       } else {
         toast.error(response.data.message);
       }
@@ -55,33 +55,36 @@ const Register = () => {
             <div className="col-lg-12 login-form">
               <form onSubmit={handleSubmit} className="loginform">
                 <div className="form-group">
-                  <label className="form-control-label">USERNAME</label>
+                  <label htmlFor="username" className="form-control-label">USERNAME</label>
                   <input
                     type="text"
                     className="form-control login-email"
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
                     required
+                    id="username"
                   />
                 </div>
                 <div className="form-group">
-                  <label className="form-control-label">EMAIL</label>
+                  <label htmlFor="email" className="form-control-label">EMAIL</label>
                   <input
                     type="email"
                     className="form-control login-email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
+                    id="email"
                   />
                 </div>
                 <div className="form-group">
-                  <label className="form-control-label">PASSWORD</label>
+                  <label htmlFor="password" className="form-control-label">PASSWORD</label>
                   <input
                     type="password"
                     className="form-control login-pass"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     required
+                    id="password"
                   />
                 </div>
                 <div className="col-lg-12 loginbttm">
